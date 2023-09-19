@@ -50,10 +50,10 @@ export const StyledRegister = styled.div`
         background: #212529;
         box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
         border-radius: 4px;
-        max-height: 730px;
+        height: 709.96px;
         padding-top: 30px;
         margin-bottom: 50px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
     }
     .div_mesage{
         display: flex;
@@ -130,7 +130,8 @@ export const StyledRegister = styled.div`
             width: 369px;
         }
         .form_register{
-            height: 891.19px;
+            height: 755px;
+            padding-bottom: 0;
         }
     }
 `

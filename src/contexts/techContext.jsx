@@ -64,8 +64,7 @@ export const TechProvider = ({children}) => {
         setShowInfoModal(false)
     }
 
-    const makeTech = (data) => {
-        async function make(){
+    const makeTech = async (data) => {
             try {
                 const response = await api.post("/users/techs", data)
                 handleClosePlusModal()
@@ -74,11 +73,9 @@ export const TechProvider = ({children}) => {
             } catch (error) {
                 toast.error('Erro ao adicionar tecnologia!', {autoClose:2500})
             }
-        }make()
     }
 
-    const deleteTech = (techId) => {
-        async function delTech(){
+    const deleteTech = async (techId) => {
             try {
                 const response = await api.delete(`/users/techs/${techId}`)
                 handleCloseInfo()
@@ -88,11 +85,9 @@ export const TechProvider = ({children}) => {
             } catch (error) {
                 toast.error('Erro ao excluir tecnologia!', {autoClose:2500})
             }
-        }delTech()
     }
 
-    const editTech = (data) => {
-        async function edit(){
+    const editTech = async (data) => {
             try {
                 const response = await api.put(`/users/techs/${idTech}`, data)
                 const newData = {...response.data, ...data}
@@ -104,7 +99,6 @@ export const TechProvider = ({children}) => {
             } catch (error) {
                 toast.error('Erro ao editar tecnologia!', {autoClose:2500})
             }
-        }edit()
     }
 
     
